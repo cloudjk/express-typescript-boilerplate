@@ -8,13 +8,16 @@
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "lint": "eslint --fix --ext .ts src"
+    "lint": "eslint --fix --ext .ts src",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/jest": "^27.0.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.1",
     "@types/rewire": "^2.5.28",
@@ -24,6 +27,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
+    "husky": "^7.0.0",
     "nodemon": "^2.0.14",
     "prettier": "^2.4.1",
     "rewire": "^5.0.0",
