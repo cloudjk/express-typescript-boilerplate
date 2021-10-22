@@ -1,8 +1,10 @@
 import express from 'express';
+import { config } from './config/config';
 import { rootHandler, helloHandler } from './handlers';
 
 const app = express();
-const port = process.env.PORT || '8000';
+
+const port = config.PORT;
 
 app.get('/', rootHandler);
 app.get('/hello/:name', helloHandler);
