@@ -2,7 +2,7 @@ import { format, createLogger, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import appRootPath from 'app-root-path';
 import moment from 'moment-timezone';
-import { config } from '../config/config';
+import { config } from '../configs/config';
 
 const logFormat = format.combine(
   format.colorize(),

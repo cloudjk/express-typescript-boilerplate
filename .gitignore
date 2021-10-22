@@ -1,3 +1,11 @@
+# Dependency directories
 node_modules
+
+# Distributables
 dist
+
+# dotenv environment variables file
 .env
+
+# Logs
+logs

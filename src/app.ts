@@ -1,16 +1,21 @@
 import express from 'express';
-import { config } from './config/config';
-import { rootHandler, helloHandler } from './handlers';
+import helmet from 'helmet';
+import cors from 'cors';
+import { config } from './configs/config';
+import routes from './routes';
 
 const app = express();
 
+app.use(helmet());
+
+app.use(cors());
+
+// body-parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const port = config.PORT;
+app.use('/', routes);
 
-app.get('/', rootHandler);
-app.get('/hello/:name', helloHandler);
-
-// eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Server is listening on ${port}`));
+app.listen(config.PORT, () =>
+  console.log(`Server is listening on ${config.PORT}`),
+);
