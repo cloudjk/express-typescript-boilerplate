@@ -4,6 +4,9 @@ import { rootHandler, helloHandler } from './handlers';
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 const port = config.PORT;
 
 app.get('/', rootHandler);
