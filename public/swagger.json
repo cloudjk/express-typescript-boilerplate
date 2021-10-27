@@ -1,29 +1,29 @@
 {
-	"components": {
-		"examples": {},
-		"headers": {},
-		"parameters": {},
-		"requestBodies": {},
-		"responses": {},
-		"schemas": {},
-		"securitySchemes": {}
-	},
-	"info": {
-		"title": "node-typescript-boilerplate",
-		"version": "1.0.0",
-		"license": {
-			"name": "MIT"
-		},
-		"contact": {
-			"name": "jinyongryankim ",
-			"email": "stuffedpig@naver.com"
-		}
-	},
-	"openapi": "3.0.0",
-	"paths": {},
-	"servers": [
-		{
-			"url": "/"
-		}
-	]
+  "components": {
+    "examples": {},
+    "headers": {},
+    "parameters": {},
+    "requestBodies": {},
+    "responses": {},
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "node-typescript-boilerplate",
+    "version": "1.0.0",
+    "license": {
+      "name": "MIT"
+    },
+    "contact": {
+      "name": "jinyongryankim ",
+      "email": "studkim76@gmail.com"
+    }
+  },
+  "openapi": "3.0.0",
+  "paths": {},
+  "servers": [
+    {
+      "url": "/localhost"
+    }
+  ]
 }

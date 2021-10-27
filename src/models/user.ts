@@ -1,7 +1,31 @@
-export interface User {
-  id: number;
-  email: string;
+export interface Geo {
+  lat: string;
+  lng: string;
+}
+
+export interface Address {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
+}
+export interface Company {
   name: string;
-  status?: 'Happy' | 'Sad';
-  phoneNumbers: string[];
+  catchPhrase: string;
+  bs: string;
+}
+
+export interface User {
+  userId?: number;
+  id: number;
+  title?: string;
+  body?: string;
+  name: string;
+  username?: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
 }

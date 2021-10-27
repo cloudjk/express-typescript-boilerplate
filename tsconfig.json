@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -9,10 +10,10 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "strict": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": false,
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
     }
