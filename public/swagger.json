@@ -23,7 +23,7 @@
   "paths": {},
   "servers": [
     {
-      "url": "/localhost"
+      "url": "/"
     }
   ]
 }

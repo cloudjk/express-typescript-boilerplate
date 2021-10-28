@@ -1,15 +1,24 @@
-import { Body, Controller, Path, Post, Route, SuccessResponse } from 'tsoa';
-import { User } from '../models/user';
-import { UserCreationParams, UsersService } from '../services/usersService';
+import { Body, Controller, Post, Route, SuccessResponse } from 'tsoa';
+import { StatusCodes } from 'http-status-codes';
+import { UsersService } from '../services/usersService';
+import { IUser, UserCreationParams } from '../types/user.interface';
+import logger from '../utils/logger';
 
 @Route('posts')
 export class PostController extends Controller {
-  @SuccessResponse('201', 'Created') // Custom success response
+  @SuccessResponse(StatusCodes.CREATED, 'Created') // Custom success response
   @Post()
   public async createUser(
     @Body() requestBody: UserCreationParams,
-  ): Promise<User> {
-    // this.setStatus(201); // set return status 201
-    return new UsersService().create(requestBody);
+  ): Promise<IUser> {
+    try {
+      this.setStatus(StatusCodes.CREATED);
+      const result = await new UsersService().create(requestBody);
+      return result;
+    } catch (err) {
+      logger.error('err : ', err.message);
+      this.setStatus(StatusCodes.BAD_REQUEST);
+      return err;
+    }
   }
 }
