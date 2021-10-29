@@ -10,6 +10,7 @@ export class UsersService {
     const response = await axios.get(
       `https://jsonplaceholder.typicode.com/users/${id}`,
     );
+
     return response.data;
   }
 
