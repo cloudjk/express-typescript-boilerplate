@@ -1,7 +1,7 @@
 # Express-Typescipt-Jest-Swagger Boilerplate
 
 <!-- badge icon: https://simpleicons.org/ -->
-<!-- markdown testing: https://dillinger.io/ -->
+<!-- markdown testing: https://www.easyme.online/d OR https://dillinger.io/ -->
 
 ![nodejs](https://img.shields.io/badge/nodejs-v14-green?style=flat-square&logo=Node.js&logoColor=#339933)
 ![express](https://img.shields.io/badge/express-v4-orange)
