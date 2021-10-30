@@ -2,17 +2,14 @@ import { format, createLogger, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import appRootPath from 'app-root-path';
 import moment from 'moment-timezone';
-import { config } from '../configs/config';
+import { config } from '../configs';
 
 const logFormat = format.combine(
   format.colorize(),
   format.timestamp(),
   format.align(),
   format.printf(
-    (info) =>
-      `${moment().tz('Australia/Sydney').format('YYYY-MM-DD hh:mm:ss A')} ${
-        info.level
-      }: ${info.message}`,
+    (info) => `${moment().tz('Australia/Sydney').format('YYYY-MM-DD hh:mm:ss A')} ${info.level}: ${info.message}`,
   ),
 );
 

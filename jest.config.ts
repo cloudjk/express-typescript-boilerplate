@@ -1,15 +1,15 @@
-export default {
-  globals: {
-    extensionsToTreatAsEsm: ['.ts', '.js'],
-    'ts-jest': {
-      useESM: true,
-    },
+import type { InitialOptionsTsJest } from 'ts-jest/dist/types';
+import { defaults as tsjPreset } from 'ts-jest/presets';
+// import { defaultsESM as tsjPreset } from 'ts-jest/presets'
+// import { jsWithTs as tsjPreset } from 'ts-jest/presets'
+// import { jsWithTsESM as tsjPreset } from 'ts-jest/presets'
+// import { jsWithBabel as tsjPreset } from 'ts-jest/presets'
+// import { jsWithBabelESM as tsjPreset } from 'ts-jest/presets'
+
+const config: InitialOptionsTsJest = {
+  transform: {
+    ...tsjPreset.transform,
   },
-
-  preset: 'ts-jest/presets/js-with-ts-esm',
-
-  // from https://stackoverflow.com/a/57916712/15076557
-  transformIgnorePatterns: [
-    'node_modules/(?!(module-that-needs-to-be-transformed)/)',
-  ],
 };
+
+export default config;
