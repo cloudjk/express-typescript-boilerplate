@@ -29,7 +29,7 @@ All codes are written 100% typescript and for documentation, swagger-ui-express 
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
+Boilerplate uses a number of open source projects to work properly:
 
 - [node.js] - evented I/O for the backend
 - [Express] - fast node.js network app framework
@@ -39,7 +39,7 @@ Dillinger uses a number of open source projects to work properly:
 
 ## Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v14 to run.
+Boilerplate requires [Node.js](https://nodejs.org/) v14 to run.
 
 Clone the code using git clone command
 
