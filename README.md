@@ -61,6 +61,15 @@ yarn install --production
 NODE_ENV=production yarn start
 ```
 
+With Docker
+
+```sh
+git clone git@github.com:cloudjk/express-typescript-boilerplate.git
+cd express-typescript-boilerplate
+docker-compose up -d (RUN)
+docker-compose down (STOP)
+```
+
 ## License
 
 MIT

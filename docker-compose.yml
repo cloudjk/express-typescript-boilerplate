@@ -1,0 +1,10 @@
+version: '3'
+services:
+  express-bolerplate:
+    container_name: express_typescript_boilerplate
+    build:
+      context: ./
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - '8000:8000'
